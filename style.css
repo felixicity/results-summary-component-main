@@ -1,0 +1,221 @@
+:root {
+    --Light-red: 0, 100%, 67%;
+    --Orangey-yellow: 39, 100%, 56%;
+    --Green-teal: 166, 100%, 37%;
+    --Cobalt-blue: 234, 85%, 45%;
+
+ /* Gradients */
+     /* (background) */
+    --Light-slate-blue : 252, 100%, 67%;
+    --Light-royal-blue : 241, 81%, 54%;
+    /* (circle) */
+    --Violet-blue : 256, 72%, 46%;
+    --Persian-blue : 241, 72%, 46%;
+
+
+
+/* ### Neutral */
+
+    --White: 0, 0%, 100%;
+    --Pale-blue: 221, 100%, 96%;
+    --Light-lavender: 241, 100%, 89%;
+    --Dark-gray-blue: 224, 30%, 27%;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hanken Grotesk",sans-serif;
+    font-weight: 500;
+    min-width: 375px;
+    max-width:80rem;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.result {
+    background:linear-gradient(hsl(var(--Light-slate-blue)),hsl(var(--Light-royal-blue)));
+    color: hsl(var(--White));
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* .result-title {
+    font-weight: 500;
+} */
+
+.result-score-disp {
+    width: 6.6rem;
+    height: 6.6rem;
+    border-radius: 50%;
+    margin:1.5rem auto;
+    background:linear-gradient(hsl(var(--Violet-blue)),hsla(var(--Persian-blue),.2));
+    padding: 1.5rem 0 .5rem 0;
+}
+
+.result-score-disp #main-score {
+    font-size:2.7rem;
+    font-weight: 800;
+    margin-bottom: .3rem;
+}
+
+.result-score-disp #total-score {
+    font-size:.5rem;
+    color: hsl(var(--Light-lavender));
+}
+
+.result-comment {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: .8rem;
+}
+
+.result-comment-msg {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: .8rem;
+    color: hsl(var(--Light-lavender));
+    line-height: 1.5;
+    word-spacing: 2px;
+}
+
+.summary {
+    margin:1.5rem;
+}
+
+.summary-title {
+    font-weight: bold;
+}
+
+.summary ul{
+   list-style-type:none;
+   margin:1.5rem 0;
+}
+
+.summary .category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.category-item .category-description {
+    display: flex;
+    column-gap: .8rem;
+    align-items: center;
+}
+
+.summary .category-item:nth-child(1){
+    color: hsl(var(--Light-red));
+    background-color: hsl(var(--Light-red),.1);
+}
+
+.summary .category-item:nth-child(2){
+    color: hsl(var(--Orangey-yellow));
+    background-color: hsl(var(--Orangey-yellow),.1);
+}
+.summary .category-item:nth-child(3){
+    color: hsl(var(--Green-teal));
+    background-color: hsl(var(--Green-teal),.1);
+}
+.summary .category-item:nth-child(4){
+    color: hsl(var(--Cobalt-blue));
+    background-color: hsl(var(--Cobalt-blue),.1);
+}
+
+.category-item .category-score{
+    color:#000;
+}
+
+.category-item .category-score span{
+    color:hsla(var(--Light-lavender));
+}
+
+.summary button {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    padding: .9rem 4rem;
+    border-radius: 25px;
+    border: none;
+    background-color: hsl(241, 87%, 15%);
+    color:hsl(var(--White));
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.summary button:hover {
+    background:linear-gradient(hsl(var(--Violet-blue)),hsl(var(--Persian-blue)));
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media(min-width:600px) {
+    .wrapper {
+        max-width: 35rem;
+        margin: 4rem auto;
+        flex-direction: unset;
+        border-radius: 30px;
+        max-height: 23rem;
+        box-shadow: 10px 10px 5px hsl(var(--Pale-blue));
+    } 
+         
+    .result{
+        border-radius: 30px;
+        width: 50%;
+        padding:2rem; 
+    }
+
+    .result-score-disp{
+        width:9rem;
+        height: 9rem;
+        padding: 2.8rem 0 1rem 0;
+    }
+    .result #main-score {
+        font-size: 3rem;
+    }
+    .result-comment {
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+    }
+    
+    .result-comment-msg {
+        text-align: center;
+        font-size: .8rem;
+    }
+
+    .summary{
+       width: 50%;
+       padding: 0  .8rem;
+    }
+
+    .summary ul{
+        margin: 1.5rem 0;
+     }
+     
+    .summary .category-item {
+        margin-bottom: 1rem;
+        padding: .6rem;
+        font-size: .8rem;
+    }
+
+}
+
+
